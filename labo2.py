@@ -4,13 +4,13 @@ import time
 inicio = time.time()
 
 
-
+#Creacion del menu de seleccion
 def menu():
     print("[1] Especificar nombre de archivo y procesar su contenido")
     print("[0] Salir")
 menu()
 opcion = int (input("Escoja su opcion: "))
-
+#Creacion de la funcion que leera el archivo 
 def archi():
 
     file_name = str(input("Introduzca el nombre del archivo:  "))
@@ -61,7 +61,7 @@ def archi():
         print(f"Las palabras unicas del archivo " , file_name , " son igual a " , {len(unicos)})
         print ('Duracion: {} segundos'.format(time.time() - inicio))
     anykey=input("Presiona cualquier tecla para regresar al menu.  ")
-
+##Se vuelve a llamar al menu para poder hacer de nuevo el proceso
 while opcion != 0:
     if opcion == 1:
         archi()
